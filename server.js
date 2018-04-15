@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 
 var quotes = require('./quotes.json');
 
@@ -11,6 +12,4 @@ app.get('/quotes', (req, res) => {
 
 
 
-app.listen(3000, () => {
-	console.log('Listening on port 3000');
-});
+app.listen(port);
